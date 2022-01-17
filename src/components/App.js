@@ -21,6 +21,13 @@ class App extends Component {
     return(
       <div>
         <h2>Gift Givers</h2>
+        <div data-test="gift-list">
+          {
+            this.state.gifts.map((gift) => {
+              return<div key={gift.id}></div>
+            })
+          }
+        </div>
         <Button data-test="add-btn" onClick={this.addGifts}>Add gifts</Button>
       </div>
     )

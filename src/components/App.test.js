@@ -17,3 +17,8 @@ it('add new gift after clicking on the button', () => {
   app.find("[data-test='add-btn']").simulate('click');
   expect(app.state().gifts).toEqual([{id: 1}])
 })
+
+it('add a new gift to the gifts list after clicking the add button', () => {
+  app.find("[data-test='add-btn']").simulate('click');
+  expect(app.find("[data-test='gift-list']").children().length).toEqual(2);
+})

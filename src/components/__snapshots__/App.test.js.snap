@@ -5,6 +5,9 @@ exports[`renders correctly 1`] = `
   <h2>
     Gift Givers
   </h2>
+  <div
+    data-test="gift-list"
+  />
   <Button
     active={false}
     data-test="add-btn"
