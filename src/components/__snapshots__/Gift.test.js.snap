@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gift renders correctly 1`] = `
+<div>
+  <Form>
+    <FormGroup>
+      <FormLabel
+        column={false}
+        visuallyHidden={false}
+      >
+        Person Name
+      </FormLabel>
+      <FormControl
+        data-test="person-input"
+        onChange={[Function]}
+      />
+    </FormGroup>
+    <FormGroup>
+      <FormLabel
+        column={false}
+        visuallyHidden={false}
+      >
+        Present
+      </FormLabel>
+      <FormControl
+        data-test="present-input"
+        onChange={[Function]}
+      />
+    </FormGroup>
+  </Form>
+  <Button
+    active={false}
+    data-test="remove-button"
+    disabled={false}
+    onClick={[Function]}
+    variant="primary"
+  >
+    Remove Gift
+  </Button>
+</div>
+`;
