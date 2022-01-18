@@ -12,10 +12,10 @@ class Gift extends Component {
 
     render(){
         return(
-            <div>
+            <div className="gift">
                 <Form>
                     <FormGroup>
-                        <FormLabel>Person Name</FormLabel>
+                        <FormLabel>Person</FormLabel>
                         <FormControl 
                             data-test="person-input"
                             onChange={(evt) => this.setState({ person: evt.target.value })}
