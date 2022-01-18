@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import Gift from "./Gift";
 
 class App extends Component {
   constructor(){
@@ -16,17 +17,27 @@ class App extends Component {
     gifts.push({id: max_id+1})
     this.setState({ gifts })
   }
+  removeGift = (id) => {
+    const gifts = this.state.gifts.filter(gift => gift.id !== id)
+    this.setState({ gifts })
+  }
 
   render(){
     return(
       <div>
         <h2>Gift Givers</h2>
         <div data-test="gift-list">
-          {
+          <div data-test="gift-component">{
             this.state.gifts.map((gift) => {
-              return<div key={gift.id}></div>
+              return(
+                <Gift 
+                  key={gift.id}
+                  gift={gift}
+                  removeGift={this.removeGift}
+                />
+              )
             })
-          }
+          }</div>
         </div>
         <Button data-test="add-btn" onClick={this.addGifts}>Add gifts</Button>
       </div>
